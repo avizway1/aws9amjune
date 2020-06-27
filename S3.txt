@@ -1,0 +1,96 @@
+D: 26/06/2020
+
+Object Based storage : pdf, .exe, .doc...  : S3
+Block Based Storage : Install and run the application / OS.. : Instance Store, EBS
+Network Based Storage : Storage over the network.. : EFS, FSx
+
+S3 : Simple Storage Service
+
+--> We store all the data in buckets.
+--> Bucket name should be unique.
+--> Soft limit for bucket count : 100
+
+Bucket Naming Limitations: 
+
+Min : 3 Char, 63 Char
+Should not start with Capital letters.
+Should not start with . / end with . / no ..
+Bucket name should not resemble IP address format.
+
+
+Off : Block all public access... AT bucket level.. 
+
+
+Standard Path: 
+https://s3.region.amazonaws.com/bucketname/objectname
+
+Virtual Path: 
+https://bucketname.s3.region.amazonaws.com/objectname
+https://bucketname.s3.amazonaws.com/objectname
+
+--> No Pre-provisioning required.
+--> Based on selected storage class, and data transfering, we'll get charged.
+--> We have unlimited storage in s3 platform.
+--> We have a limit for Object size.. 
+--> Max object size s3 supports is 5 TB.. 
+
+
+100gb Data..!!! 
+
+20 gb Frequently
+20 gb infrequntly accesing
+30 gb archive
+20 gb not sure about the access patterns..
+
+
+S3-Standard : Frequently accessed data.. >=3 AZs... 
+Availability : 99.99% , Durability : 99.999999999 %
+
+Standard-IA : Infrequently accessed data.. Data available immediatlely..!!   >=3 AZs..
+Availability : 99.9% , Durability : 99.999999999 %
+
+OneZone-IA : Infrequently accessed data (less Imp Data).. Data available immediatlely..!! 1 AZs..  Availability : 99.5% , Durability : 99.999999999 %
+
+S3 Glacier : Designed for longtime archievals.. Won't availbale immediately..!! Minutes to Hours to restore the data.. Availability : 99.99% , Durability : 99.999999999 % 
+>=3 AZs..
+
+S3 Glacier Deep Archieve : Designed for longtime archievals.. Won't availbale immediately..!! Hours to restore the data.. Availability : 99.99% , Durability : 99.999999999 %.. >=3 AZs..
+
+S3 Intelligent-Tier : When we are not sure about the access patterns.. Data available immediatlely..!!   >=3 AZs.. Availability : 99.9% , Durability : 99.999999999 %
+
+RRS (Redused Redundancy storage) : NOT Recommanded.. Logs, thumbnails.. 
+Duralibility : 99.99%
+
+
+Glacier Retrivals : 
+Bulk retrieval : Typically within 5-12 hours
+
+Standard retrieval : Typically within 3 - 5 hours
+
+Expedited retrieval : Typically within 1 - 5 minutes when retrieving less than 250MB
+
+FreeTier : 
+5 Gb S3-Standard Storage.
+2000 PUT Operations (Upload)
+20,000 GET Operations (Download)
+
+________________________________________________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
