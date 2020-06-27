@@ -76,9 +76,27 @@ FreeTier :
 
 ________________________________________________________________________________________
 
+D: 27/06/2020
+
+Versioning :
+--> We can track all changes happening on our file.
+
+Version : HIDE
+--> We can get file back if we delete accidentally. 
+--> We will get a Delete marker, Delete the DM, we can get file back.
+
+Version : SHOW.
+--> If we delete anything, it won' give us the Delete Marker.
 
 
+LCR : Transit object from one storage class to another storage class using LCR. At some point of time, we can trigger to delete the latest version object / Previous verion object.
 
+
+CRR / SRR : 
+___________
+
+Cross Region Replication
+Same region replciation
 
 
 
