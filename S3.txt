@@ -98,13 +98,57 @@ ___________
 Cross Region Replication
 Same region replciation
 
+_______________________________________________________________________________________
+
+D: 29/06/2020
+
+Server access logging : Want to enable logging on a single bucket. 
+
+
+Static website hosting : 
+--> Easy to Manage
+--> For our website also we'll get 99.99% avail, 99.999999999% durability
+--> No OS Patches/ No OS level operations required.
+
+--> We should give atleast readOnly permissions for everyone.
+--> Bucket Name should be same as Domain Name.
+
+http://bucketname.s3-website.region.amazonaws.com	--> avinash.website
+
+http status codes:
+
+2XX : OK / SUCCESS
+3XX : Redirection error
+4XX : Client Side error
+5XX : Service side error
+
+
+Encryptions : 
+
+--> In-Transite Encryption
+	--> SSL / TLS enabled
+
+--> Server Side Encryption / At-Rest Encryption
+	
+--> SSE - S3 (S3 manages the Pubic and private Keys) : Who have valid permissions on s3 platform can decrypt the data.
+
+--> SSE - KMS (KMS Manages the Public and Private Keys, Key material also generates by KMS only) :  
+
+	--> AWS Managed keys : aws/s3 : Who have valid permissions on s3 platform can 					decrypt the data.
+	--> Customer Managed Key : We need to define, who can administrate the key 
+					We can define who can use the key.
+	(NO FREE TIER ELIGIBILITY For CUstomer Managed KEY).
+
+--> SSE - C (KMS Manages the Public and Private Keys but Customer need to upload the key material (public key and private key))
+
+
+--> Client Side Encryption : Before uploading data to s3 platform, in our local devices/ environment we can encrypt the data with our own encry mechanism.
 
 
 
+Symmetric : A single encryption key that is used for both encrypt and decrypt operations
 
-
-
-
+Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
 
 
 
