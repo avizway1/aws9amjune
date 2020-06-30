@@ -151,6 +151,51 @@ Symmetric : A single encryption key that is used for both encrypt and decrypt op
 Asymmetric : A public and private key pair that can be used for encrypt/decrypt or sign/verify operations
 
 
+______________________________________________________________________________________
+
+D: 30/06/2020
+
+Object Lock : 
+--> We cannot enable Object lock to an existing bucket.
+--> If we required we can raise a ticket with AWS, they'll enable.
+--> Versioning must be enable, if we want to use Object lock.
+
+--> While creating bucket, we need enable this option.
+
+Governance mode can be disabled by AWS accounts that have specific IAM permissions.
+Compliance mode cannot be disabled by any user, including the root account.
+
+Tags : We can add tags for easy management.
+
+Transfer acceleration : For qyuick uplaod / downloads via Edge Locations. 
+
+Events : 
+--> SQS Simple Queue Service
+--> Lambda
+--> SNS Simple Notification Service  : 
+
+
+Requester pays: Instead of Bucket owner, who is requesting the data, he'll get charged for the request and data transfer.
+
+Storage class analysis: Tells about our object access patterns, Suggests best storage class for our data.
+
+Metrics : Graphs about our s3 bucket.  : Cloudwatch gives us all these metrics.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
