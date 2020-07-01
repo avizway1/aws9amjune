@@ -182,7 +182,49 @@ Storage class analysis: Tells about our object access patterns, Suggests best st
 Metrics : Graphs about our s3 bucket.  : Cloudwatch gives us all these metrics.
 
 
+_______________________________________________________________________________________
+D: 01/07/2020
 
+ACLs : Access Control List : 
+--> Your own 
+--> Another AWS Account		: CLI, 3rd party.. 
+--> Public Access		: CLI, 3rd party..
+--> Store Logs
+
+
+
+bucket Policy : 
+
+Bucket : Restrict/Deny "avinash" to perform Delete and upload object on "avinash" bucket.
+
+
+Effect : ALLOW / DENY		: DENY
+Principal : IAM USER/GROUP	: arn:aws:iam::518084852393:user/avinash
+Actions : Upload / Delete	: PUT OBject , Delete Object
+Resources : on what bucket	: arn:aws:s3:::avinash/*
+
+
+object : arn:aws:s3:::avinash/*
+Bucket : arn:aws:s3:::avinash
+
+PUT : Uplaod
+GET : Download
+
+
+Create an IAM User with AccessKeyID and SecretAccessKey..
+3rd Party : Cloudberry explorer, CyberDuck, S3Browser, WinSCP.. 
+
+
+Import / Export : 
+
+10TB Data ==> AWS.. 
+
+AWS Snowcone : 8TB Device..
+AWS Snowball Edge : 100TB Device..  
+AWS Snowmobile : PB Scale container..
+
+
+AWS Direct Connect : It's a dedicated connectivity between our On-Premise network to AWS Environment.
 
 
 
