@@ -1,0 +1,48 @@
+EC2 : Elastic Compute Cloud.. 
+
+Instances = Server = VMs/ Virtual Machines / Azure VM / GCP Engine
+
+
+On-Demand ec2 Instance : No stable workload, Non Predictable use cases, If you want to test your application for the first time.. 
+Pricing : per hr basis..  /sec basis (With min of 60 Sec)..
+
+
+Reserved Instances (RI) : FOr long term runs, Stable work loads.. Less cost compared to On-Demand. Duration : 1 Yr / 3 Yrs.. 
+
+RI : 
+	--> Standard RI : We cannot change the configuration.
+	--> Convertable RI : We can chnage the configuration. 
+	--> Scheduled RI : Repeated tasks for a duration.
+
+Pricing : 
+	--> Full Upfront : Pay everything while purchasing. 
+	--> Partial upfront : Pay 30-50% while purchasing, Remaining monthly basis with reduced pricing. 
+	--> No Upfront : Pay everything monthly basis.
+
+
+SPOT Instances : If we have flexible start / stop duration, If any server terminates application not gonna effect.. 
+--> Spot Feet requests
+--> Pricing History
+
+16CPU, 32 RAM Server.. 1$/Hr.. Bid your price against aws pricing..  
+: 0.50$/Month.. Duration
+
+
+0.10$/Hr...   1.45 Hr.. Price increased and AWS terminated instance.. = 0.10$
+0.10$/Hr...   1.45 Hr.. Price not increased and you terminated instance.. = 0.20$
+
+
+Tenancy : 
+--> Shared Tenancy : Underlying hardware shares with Multiple customers.
+--> Dedicated tenancy : Underlying h/w will not share with any other customer.
+	--> Dedicated host : 
+	--> Dedicated Instance : 
+
+https://aws.amazon.com/ec2/dedicated-hosts/#:~:text=An%20important%20difference%20between%20a,same%20physical%20server%20over%20time.
+
+
+
+
+
+
+
