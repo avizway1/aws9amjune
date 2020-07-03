@@ -41,6 +41,98 @@ Tenancy :
 https://aws.amazon.com/ec2/dedicated-hosts/#:~:text=An%20important%20difference%20between%20a,same%20physical%20server%20over%20time.
 
 
+______________________________________________________________________________________
+
+D: 
+
+03/07/2020
+
+EC2 : Region specif Service..!! 
+Mumbai  :
+N Virginia : 
+
+Free Tier : 
+750 Hours/Month : 1 Server = 1 Month.. t2.micro.. Windows Instance
+750 Hours/Month : 1 Server = 1 Month.. t2.micro.. Linux Instance
+
+
+Windows Instance Launch : 
+
+Step 1 : Choose an AMI (Amazon Machine Image) 		: OS
+AMI : template of an OS with required applications and services to run our instance.
+Windows Server 2016 Base
+
+Step 2 : Choose an instance Type			: CPU, RAM, Network
+
+Free tier : t2.micro
+
+t3.medium : 2 vCPU, 4 RAM
+c5.xlarge : c5.xlarge 4 vCPU, 8 RAM
+m4.2xlarge 8 vCPU, 32 RAM
+
+general purpose : t2, t3, t3a, m3, m4, m5a
+COmpute : c4, c5, c5n
+GPU : p2, g4
+Memory : r4, r5, r5d, x1
+Storage : i2, d
+
+
+General Purpose : General purpose instances provide a balance of compute, memory, and network resources, and are a good choice for many applications. 
+
+Compute optimized : instances have a higher ratio of vCPUs to memory than other families, and the lowest cost per vCPU among all Amazon EC2 instance types.
+
+GPU instances provide graphics processing units (GPUs) along with high CPU and network performance for applications benefiting from highly parallelized processing, including 3D graphics, HPC, rendering, and media processing applications.
+
+Memory optimized instances have the lowest cost per GB of RAM among Amazon EC2 instance types.
+
+Storage optimized instances provides you with direct-attached storage options optimized for applications with specific disk I/O and storage capacity requirements.
+
+
+Step 3 : Configure additional options			: 
+
+Shutdown behavior : Stop / Terminate 	--> STOP
+Termination protection : 
+
+
+Step 4 : Choose Storage					: Storage (SSD/HDD/Magnetic)
+
+Step 5 : Configure Tags					: Add tags (Max 50 Tags)
+
+Step 6 : Configure SG					: Port/Protocol.. 
+
+Windows : RDP : 3389 : 0.0.0.0/0
+Linux : SSH : 22 : 0.0.0.0/0
+
+OS : 0-65535 Port numbers.. 
+
+Step 7 : Review and Launch With a Keypair.		: For UN & Pwd
+
+.pem file --> 
+
+Public Key : AWS keeps the public key with them, They place it in our instance.
+Private Key : Gives to us when we create a keypair..  
+
+
+
+How to connect : 
+Windows : mstsc / Remote desktop connections.. 
+
+--> Goto start --> look for "Remote Desktop conection"--> open
+--> goto "run" --> enter "mstsc"
+--> choose instance --> goto "Actions" --> Connect --> Down load "remote desktop file".
+
+
+Task : Create another user in our ec2 instance, Provide him "RDP permissions" and "Local admin rights".
+
+Try to login to the instance with newly created user. 
+
+
+
+
+
+
+
+
 
 
 
