@@ -126,6 +126,66 @@ Task : Create another user in our ec2 instance, Provide him "RDP permissions" an
 
 Try to login to the instance with newly created user. 
 
+________________________________________________________________________________________
+
+D: 04/07/2020
+
+Security groups : 
+
+Install IIS in Windows ec2 instance. 
+
+C:\inetpub\wwwroot		--> Place index.html file here.
+
+
+SG contains Inbound rules and Outbound rules..
+
+Outbound: By defaultly all traffic allowed via outbound rules to our ec2 instance. 
+
+Inbound : Whatever the traffic you want to deliver from your ec2 instance, we need to open that port explicitly.
+
+--> Changes to the SG takes effect immediately for all the insatnce.
+--> We cannot deny traffic using SG.
+
+rdp : 3389
+ssh : 22
+http : 80
+https : 443
+mysql : 3306
+mssql : 1433
+
+Allow for everyone, except on network...!!!! Not possible using SG.	(NACL --> VPC)
+
+
+EIP Elastic IP Addresss : NO FREE TIER : From AWS we can get a Dedicated IP address. We can use this IP address for our resources.
+
+ENI : Elastic Network Interface : If we required additional Network interfaces, we can use ENI.
+
+
+Status Checks : 
+
+System Status Checks : These checks monitor the AWS systems required to use this instance and ensure they are functioning properly.
+
+Instance Status Checks  : These checks monitor your software and network configuration for this instance.
+
+Task : Ping your ec2 instance.
+
+Task 2 : Launch Multiple Windows ec2 instance, Make instance 1 as a webserver..  and add additional ENI for instance 1 with only private IP.  (webserver with 2 Private IPs)
+
+Connect to another ec2 instance, Try to access the webpage using 2 private IPs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
