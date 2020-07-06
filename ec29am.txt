@@ -174,6 +174,68 @@ Task 2 : Launch Multiple Windows ec2 instance, Make instance 1 as a webserver.. 
 Connect to another ec2 instance, Try to access the webpage using 2 private IPs.
 
 
+________________________________________________________________________________________
+
+D: 06/07/2020
+
+--> Instance Store volumes
+--> EBS Volumes
+
+EBS : Elastic Block Storage.. 
+
+Root volumes : gp2, io1 & magnetic
+
+--> General purpose SSD : gp2 : low latency interactive appliation, Dev/Test.. 
+Min: 1 Gb, Max: 16 TB....  IOPS : 16,000 IOPS Max.... 1 gb = 3 iops with min of 100.. 
+0.10 gb/month
+
+--> provisioned IOPS : io1 : Highest performance SSD, I/O intensive applications, Relational databases.. Min : 4 gb, Max: 16 TB.. IOPS: 64,000 IOPS max.. default ration 
+1 gb = 50 iops.. We can specify required iops count.. 0.125 gb/month
+
+--> Magnetic : standard : less freq accessed data, cheapest cost.. 
+Min: 1 gb, Max : 1 TB.. 
+
+
+==> BigData, Datawarehousing, log processing... 
+
+--> Throughput optimised HDD : st1 :  Frequently accessed nigdata, logprocessing, 
+Min: 500 gb, Max: 16 TB.. IOPS : 500 IOPS.. 0.045 gb/month
+ 
+--> Cold HDD : sc1 : Less freq accessed workloads, bigdata, logprocessing, 
+Min: 500 gb, Max: 16 TB.. IOPS : 250 IOPS.. 0.025 gb /month...
+
+
+WIndows : FAT, FAT31, NTFS, ReFS
+Linux : ext3, ext4, xfs
+
+
+Snapshots: Snapshots are backup copies of our EBS volumes.
+--> SS are point-in-time copies.
+--> Backend aws uses s3 to store these snapshots.
+
+Task : Launch an ec2 instance in 1a, Create volumes, make it avialble for your 1a ec2 instance. ... add some data..
+
+Launch another ec2 instance in 1b, make the 1a addiitonal volume availbale to this instance. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
