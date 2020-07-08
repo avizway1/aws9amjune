@@ -204,10 +204,8 @@ Min: 500 gb, Max: 16 TB.. IOPS : 500 IOPS.. 0.045 gb/month
 --> Cold HDD : sc1 : Less freq accessed workloads, bigdata, logprocessing, 
 Min: 500 gb, Max: 16 TB.. IOPS : 250 IOPS.. 0.025 gb /month...
 
-
 WIndows : FAT, FAT31, NTFS, ReFS
 Linux : ext3, ext4, xfs
-
 
 Snapshots: Snapshots are backup copies of our EBS volumes.
 --> SS are point-in-time copies.
@@ -217,7 +215,58 @@ Task : Launch an ec2 instance in 1a, Create volumes, make it avialble for your 1
 
 Launch another ec2 instance in 1b, make the 1a addiitonal volume availbale to this instance. 
 
+_______________________________________________________________________________________
 
+D: 07/07/2020
+
+
+DLM : Data LifeCycle Manager.. To automate the EBS volume backup SS..!!!
+
+GoldenAMI : Customized AMI
+
+______________________________________________________________________________________
+
+D: 08/07/2020
+
+
+Windows : mstsc : 3389 : Remote desktop connection
+Linux : ssh : Secure Shell : 22 : 
+
+
+Mac/Linux : Terminal
+Windows : Putty, MobaXterm, COmmand prompt(Install openssh), Git for windows
+
+
+Putty won't support .PEM format, We need to conver .pem to .ppk.. We can PuttyGen to COnver.
+
+
+ssh -i mykeypair.pem ec2-user@13.126.34.170
+
+
+Linux Commands:
+
+sudo yum update : 
+whoami			: Tells us as what user we are working.
+sudo su			: To switch to root user.
+
+yum update -y		: to update OS with patches
+yum install httpd -y	: Install the httpd package
+service httpd start	: To start the httpd service	(status / stop / restart)
+chkconfig httpd on	: To make httpd as Logon service
+
+cd			: Change directory
+ls			: list (Shows what files/dir we have)
+
+cd /var/www/html 
+
+editors: vi, vim, nano.. : VIM
+
+vim index.html
+
+I	: INSERT Mode
+ESC	: Comesout from Insert Mode
+:wq	: Write and Quit
+:q!	: Quit without writing the changes
 
 
 
