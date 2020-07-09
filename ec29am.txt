@@ -269,6 +269,54 @@ ESC	: Comesout from Insert Mode
 :q!	: Quit without writing the changes
 
 
+chmod 400 keypair
+ssh -i keypair ec2-user@publicip
+
+______________________________________________________________________________________
+
+D: 09/07/2020
+
+
+Windows : diskmagement -> Online --> Initilize disk --> VOlume file system --> E/F : 
+Linux : get the path of new volume (/dev) --> Write a file system --> create a dir --> and mount it to dir.. add an entry in "fstab file".. 
+
+lsblk 			: List all the block based devices
+/dev/xvdb	--> 1 gb volume	
+
+df -Th			: view active volumes
+
+mkdir foldername		: Created a directory
+
+lsblk
+df -Th
+mkdir newvolume
+ls
+mkfs -t xfs /dev/xvdb
+mount /dev/xvdb newvolume/
+df -Th
+lsblk
+
+for permanent mount, need to add an entry in "/etc/fstab" file
+
+cat /etc/mtab	--> To get the entry information to add to fstab file.
+
+/dev/xvdb /home/ec2-user/newvolume xfs rw,relatime,attr2,inode64,noquota 0 0
+
+vim /etc/fstab		--> TO edit the fstab file
+
+____
+
+Increase 2 gb and make it available.. 
+
+Choose the volume and extend the volume in AWS console..!!
+
+lsblk		--> verify newly added storage avilable / not.
+df -Th		--> Shows only 1 gb as size.
+get the mount path
+
+xfs_growfs -d /home/ec2-user/newvolume/		--> it increases to 2 gb.
+
+df -Th		--> Shows 2 gb as size.
 
 
 
