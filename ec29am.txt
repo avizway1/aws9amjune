@@ -372,8 +372,31 @@ services/
 
 ec2 Instance : Monitoring --> CLoudwatch.. 
 
+_______________________________________________________________________________________
+
+D: 13/07/2020
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is my webserver 1b</h1>" >> /var/www/html/index.html
 
 
+Classic ELB : (Prevous generation) : http. https, tcp, udp... 
+Application ELB : http, https
+Network ELB : TCP, UDP, TLS..
+
+Enable Logging : AccessLogs : S3 bucket.. 
+Sticky Sessions : 
+
+
+Task : Launch multiple instances in multiple AZs, and make them as web servers..
+Configure Classic ELB. (*COnfigure SG as dicussed)
+
+
+Free tier : 750 Hours / Month for ELB.... 1 ELB We can run for entire month..
 
 
 
