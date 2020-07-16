@@ -383,20 +383,87 @@ service httpd start
 chkconfig httpd on
 echo "<h1>This is my webserver 1b</h1>" >> /var/www/html/index.html
 
-
 Classic ELB : (Prevous generation) : http. https, tcp, udp... 
-Application ELB : http, https
+r
 Network ELB : TCP, UDP, TLS..
 
 Enable Logging : AccessLogs : S3 bucket.. 
 Sticky Sessions : 
 
-
 Task : Launch multiple instances in multiple AZs, and make them as web servers..
 Configure Classic ELB. (*COnfigure SG as dicussed)
 
-
 Free tier : 750 Hours / Month for ELB.... 1 ELB We can run for entire month..
+
+_______________________________________________________________________________________
+D: 14/07/2020
+
+
+#!/bin/bash
+yum update -y
+yum install httpd -y
+service httpd start
+chkconfig httpd on
+echo "<h1>This is my webserver 1a</h1>" >> /var/www/html/index.html
+
+http://appelb-594750406.ap-south-1.elb.amazonaws.com/
+
+
+APplication ELB uses either of algorithm: 
+1. Round robin 
+2. Least outstanding requests
+
+
+Network Load Balancer: TCP, TLS, udp.. 
+
+Network ELB uses: Flow hash algorithm.. 
+
+https://aws.amazon.com/elasticloadbalancing/features/
+
+
+Task : Launch 3 instances with 3 diff webpages.. Create an application elb, deliver 3 websites with 3 ports (80, 8080, 8888) and deliver from 3 webservers.
+
+
+--> Create a GoldenAMI
+--> Create an ELB
+--> Create an ASG
+	--> Create a Launch config
+	--> Create a ASG
+
+________________________________________________________________________________________
+
+D: 15/07/2020
+
+
+Basic Monitoring : 5 Minutes
+Detailed monitoring : 1 Min
+
+ScaleOut : Adding instance
+ScaleIN : Remove the instance
+
+Always apread instances across multiple AZs.. Run instances evently across the zones.. 
+
+
+______________________________________________________________________________________
+
+D: 16/07/2020
+
+For Windows OS, We have another service called : FSx..
+
+EFS : Elastic File System.
+
+--> EFS works with NFSv4.1 Protocol (Network FIle system)
+--> EFS supports only Linux OS. 
+--> Unlimited storage available.
+--> We can mount it to 1000s of the EC2 instances also.
+
+FSx : For windows instances we have FSx... 
+--> We can manage permissions using Active Directory / AWS Directory services.
+--> It supports SMB protocol.
+
+
+
+Lightsail : SaaS : 
 
 
 
