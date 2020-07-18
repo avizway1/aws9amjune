@@ -462,14 +462,41 @@ FSx : For windows instances we have FSx...
 --> It supports SMB protocol.
 
 
-
 Lightsail : SaaS : 
 
+_______________________________________________________________________________________
+
+D: 17/07/2020
+
+IAM User : Access type : 
+--> Programatic Access : AccessKeyID and SecretAccessKey..
+--> Management console Access : Username, Password & Sign-In.. 
+
+aws.amazon.com/cli	--> Download and install CLI tools 
 
 
+aws --version		--> tells us the installed aws version.
+aws configure		--> To configure cli tools
+
+aws s3 ls		--> List the s3 buckets
+aws servicename command
+
+aws ec2
+aws iam
+aws vpc
+
+aws s3 presign s3://objectpath --expire 60
 
 
+We always use roles instead of CLI...
 
+
+Task : Launch an ec2 instance using cli.
+
+Task 2 : while launching instance, get the index.html from s3 bucket to /var/www/html path and deliver it as webpage. perform this using userdata.
+
+How to use roles to provide cross-account access:  
+https://www.youtube.com/watch?v=sZiiB4yF0VY
 
 
 
