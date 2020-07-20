@@ -495,10 +495,19 @@ Task : Launch an ec2 instance using cli.
 
 Task 2 : while launching instance, get the index.html from s3 bucket to /var/www/html path and deliver it as webpage. perform this using userdata.
 
+
 How to use roles to provide cross-account access:  
 https://www.youtube.com/watch?v=sZiiB4yF0VY
 
+_______________________________________________________________________________________
 
+D: 20/07/2020
+
+Task : Launch a windows ec2 instance, create a password and forgot the password.. 
+Using "Systems manager run command", ec2rescue tool, get the new password to login to instance.
+
+
+PaaS : Elastic Beanstalk : 
 
 
 
