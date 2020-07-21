@@ -506,8 +506,78 @@ D: 20/07/2020
 Task : Launch a windows ec2 instance, create a password and forgot the password.. 
 Using "Systems manager run command", ec2rescue tool, get the new password to login to instance.
 
+Task 2 : Install "Putty" in windows instances using Systems Manager run command option.
 
-PaaS : Elastic Beanstalk : 
+_______________________________________________________________________________________
+
+D: 21/07/2020
+
+Placements groups : 
+
+--> Cluster PG : Best for low network latenmcy and high network thoughput
+--> Partition PG : ideal 
+--> Spread PG : 
+
+
+Cloudwatch : 
+
+EC2: 
+--> Basic Monitoring : 5 Minutes
+--> Detailed Monitoring (Enhanced Monitoring) : 1 Minute
+
+Using Cloudwatch default metrics, we can monitor only 
+--> CPU
+--> Network
+--> Disk
+--> Status Checks
+
+** We cannot monitor Memory utilisation using cloudwatch default metrics.
+** We cannot monitor Available storage using cloudwatch default metrics.
+we can use Cloudwatch Custom metrics to get the above 2.
+
+** We have an application running inside ec2 instance, We want to get the logs of that application to Cloudwatch Logs, then we can use Cloudwatch Custom metrics.
+
+We can create Dashboards using CW.
+
+Custom notifications using SNS..
+INPUT PATH:
+
+{"instance-id":"$.detail.instance-id", "state":"$.detail.state", "time":"$.time", "region":"$.region", "account":"$.account"}
+
+INPUT TEMPLATE: 
+
+"At <time>, Status of your EC2 instance <instance-id> in the AWS Region <region> has changed to <state>."
+
+__________________
+
+AWS Eventbridges: 
+
+_______________
+
+
+https://www.youtube.com/watch?v=Fe2mEkWiNSA
+
+https://github.com/avizway1/aws-labs/blob/master/Cloudwatch%20Custom%20Metric%20Configuration.MD
+
+______
+
+Ec2 Quiz
+
+_______
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
