@@ -94,8 +94,38 @@ NAT Gateway : NAT Gateway always runs in our CustomVPCs PublicSUbnet, and Provid
 
 NAT Instance : 
 
-
 Task : Create a VPC with discussed settings..!!! 
+
+________________________________________________________________________________________
+
+D: 25/07/2020
+
+NAT Instance (Free Tier) : 
+--> We don't use this in Production environments..!!
+--> Launch an NAT instance in CUSTOMVPCs Public SUbnet.
+--> Open http & Https in SG of NAT Instance.
+--> Disable "Source/Destination check".. Choose instance, Navigate to Network settings.
+
+--> Add route to "PrivateRouteTable", add an entry 0.0.0.0/0 --> NAT Instance.
+
+____
+
+Logging option at VPC : FLOW LOGS..
+
+--> Store in S3 Bucket
+--> Store in Cloudwatch Logs
+
+NACLs: Required Ephemeral Ports based on OS/ELB.. 
+
+https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports
+
+
+
+VPC Peering : 
+
+
+Task : 
+
 
 
 
