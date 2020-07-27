@@ -119,12 +119,42 @@ NACLs: Required Ephemeral Ports based on OS/ELB..
 
 https://docs.aws.amazon.com/vpc/latest/userguide/vpc-network-acls.html#nacl-ephemeral-ports
 
+_______________________________________________________________________________________
 
+D: 27/07/2020
+
+
+ssh -i keypair.pem ec-user@privateIPAddress
 
 VPC Peering : 
+_____________
+
+Enabled the communication between multiple VPCs.
+--> VPC Peering is Non-Transitive.
+
+		Requester VPC 			Accepter VPC
+CIDR		vpc-07322abcfec6525ef		vpc-0c84f896a6c0bb6fe
+VPC IP		192.168.0.0/16			172.31.0.0/16
+Region		ap-south-1			us-east-1
+Acc num	
+
+In Requesrer RT, add a route via Accepter CIDR and vice versa..!!
+
+AWS Transite Gateway:  https://www.youtube.com/watch?v=xyLlMBHy2wc
+VPN Connectivity : https://www.youtube.com/watch?v=JSTyjISscNg
+
+_____________
+
+Gateway Endpoint : S3 and DynamoDB
+**
+Without internet we can access S3 resurces from private subnet instances using Endpoints.
 
 
-Task : 
+
+
+
+
+
 
 
 
