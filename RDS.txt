@@ -1,0 +1,27 @@
+AWS RDS : Relational Datbase Service
+DaaS : Database as a Service.. 
+
+--> Amazon Aurora (MySql Compatable / PostGreSQL Compatable)
+--> Mysql		: Mysql Workbench
+--> Oracle		: Toad
+--> MariaDB		: Workbench
+--> PostgreSQL		: PGAdmin
+--> Microsoft SQL	: SSMS (SQL Server Management Studio)
+
+--> As DB contains lot of Sensitive information, we run RDS instances always in Private Subnet.
+
+
+License:
+--> LI (License Included)
+--> BYOL (bring your own license)
+--> General Public licenses
+
+--> We will not get any IP address for our DB instances. We will get a DNS Endpoint.
+
+
+Task : Launch MySQL DB, and install MySQL Workbench in Jumpserver and connect to it.
+
+Task : Launch MSSQL DB, and install SSMS in Jumpserver and connect to it.
+Task : Launch postgreSQL DB, and install PGAdmin in Jumpserver and connect to it.
+
+
