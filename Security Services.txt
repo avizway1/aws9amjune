@@ -1,0 +1,19 @@
+D: 05/08/2020
+
+Security OF the cloud : AWS .. 
+
+Security IN the cloud : YOU/ME
+
+
+--> Cloudfront : CFD is a Global Service.. Doesn't required region selection.. 
+	--> TO map a SSL cert for Cloudfront, create a SSL in N.Virginia region.
+	--> To clear the cached data from Edge, We can perform Invalidations.
+
+ACM : Amazon Certificate Manager : Service to generate SSL Cert.. 
+
+
+
+
+
+
+
