@@ -198,7 +198,32 @@ AD Connector :
 Linux instance domain Join : https://www.youtube.com/watch?v=LWi9-XL2vWQ
 
 
+_____________________________________________________________________________________
 
+D: 12/09/2020
+
+SQS : 
+
+--> Standard Queue
+--> FIFO Queue (First in First Out)
+
+Max msg size : 256kb
+--> AWS cost us in CHUNKS.. 1 chunk = 64 kb
+--> 1 million free requests , free tier
+
+
+Get notification when any user loggedin to console..
+
+{
+  "detail": {
+    "eventSource": [
+      "signin.amazonaws.com"
+    ],
+    "eventName": [
+      "ConsoleLogin"
+    ]
+  }
+}
 
 
 
